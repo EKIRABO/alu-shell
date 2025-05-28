@@ -1,3 +1,2 @@
 #!/bin/bash
 while IFS= read -r file; do echo "${file##*/}" | cut -d. -f1; done < <(find . -type f -name "*.gif") | sort -f
-
