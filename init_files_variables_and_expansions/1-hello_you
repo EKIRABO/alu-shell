@@ -1,2 +1,2 @@
 #!/bin/bash
-su MyUser | echo "hello $(whoami)"
+echo "hello My $(whoami)"
