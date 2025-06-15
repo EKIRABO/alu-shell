@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This is a comment
 echo "UID"
-ps -e -o user=,args= | sed 's/$/ ;/'
+ps -e -o user= | sort -u
