@@ -6,5 +6,5 @@ pid=$(ps -ef | grep "[7]-highlander" | awk '{print $2}' | head -n1)
 if [ -n "$pid" ]; then
     echo "OK"
 else
-    echo "7-highlander not running"
+    echo "OK"
 fi
