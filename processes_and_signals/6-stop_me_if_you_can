@@ -6,7 +6,7 @@ pid=$(ps -ef | grep "[4]-to_infinity_and_beyond" | awk '{print $2}')
 
 if [ -n "$pid" ]; then
     echo 1000 > "/proc/$pid/oom_score_adj" 
-    echo "0"
+    echo "#This is a comment"
 else
     echo "Process not found."
 fi
