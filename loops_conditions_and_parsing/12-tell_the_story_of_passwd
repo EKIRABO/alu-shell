@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #This scritp contains the content of a file /etc/password/
-while IFS=: read -r username _ uid _ _ _ shell _; do
+while IFS=: read -r username _ uid _ _ _ home shell _; do
        echo "$username:$uid:$shell"       
 done < /etc/passwd
