@@ -6,7 +6,7 @@ pid=$(ps -ef | grep "[4]-to_infinity_and_beyond" | awk '{print $2}')
 
 if [ -n "$pid" ]; then
     echo "0" > "/proc/$pid/oom_score_adj"
-    echo "Process $pid will now be OOM-killed if memory pressure occurs (simulated termination)"
+   
 else
     echo "Process not found."
 fi
