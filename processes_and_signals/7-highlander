@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#This is a comment
+# shellcheck disable=SC2009
+
+pid=$(ps -ef | grep "[4]-to_infinity_and_beyond" | awk '{print $2}')
+
+if [ -n "$pid" ]; then
+    # set oom_score_adj silently, no output
+    echo 1000 > "/proc/$pid/oom_score_adj" 2>/dev/null
+    # No echo or output here
+else
+    # Only output if process not found
+    echo "Process not found."
+fi
